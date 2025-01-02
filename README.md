@@ -14,7 +14,7 @@ The Odin Project provides a free open source coding curriculum that can be taken
 
 | Project    | Description         | Code           | Demo           |
 | ---------- | ------------------- | -------------- | -------------- |
-| HTML/CSS   | Recipes             | [View Code](#) | [View Demo](#) |
+| HTML/CSS   | Odin Recipes             | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/odin-recipes) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/odin-recipes) |
 | HTML/CSS   | Landing Page        | [View Code](#) | [View Demo](#) |
 | JavaScript | Rock Paper Scissors | [View Code](#) | [View Demo](#) |
 | JavaScript | Etch-a-Sketch       | [View Code](#) | [View Demo](#) |
