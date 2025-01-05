@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  /* fonts */
+  --fs-sm: 18px;
+  --fs-md: 24px;
+  --fs-lg: 36px;
+  --fs-xl: 48px;
+
+  /* colours */
+  --black: #1f2937;
+  --white: #f9faf8;
+  --grey: #e5e7eb;
+  --blue: #3b82f6;
+  --blue-dark: #1f2937;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+  font-weight: 900;
+  color: var(--white);
+}
+
+h2 {
+  font-size: var(--fs-lg);
+  font-weight: 900;
+  color: var(--black);
+}
+
+header {
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-sm);
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.logo {
+  font-size: var(--fs-md);
+  font-weight: 900;
+  color: var(--white);
+}
+
+.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.light {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.grey {
+  background-color: var(--grey);
+  color: var(--black);
+}
+
+.text-grey {
+  color: var(--grey);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.4rem 2rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
