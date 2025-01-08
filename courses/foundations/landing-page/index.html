@@ -5,27 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link rel="stylesheet" href="assets/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
   </head>
-  <body class="dark">
+  <body>
     <header>
       <nav>
         <div class="logo">
           <a href="#">Header Logo</a>
         </div>
         <ul>
-          <li><a href="#">header line one</a></li>
-          <li><a href="#">header line two</a></li>
-          <li><a href="#">header line three</a></li>
+          <li><a href="#">header link one</a></li>
+          <li><a href="#">header link two</a></li>
+          <li><a href="#">header link three</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <div>
+      <section class="hero">
+        <div class="hero-text">
           <h1>This website is awesome</h1>
           <p class="text-grey">
             This website has some subtext that goes here under the main title.
@@ -33,20 +30,32 @@
           </p>
           <a class="button" href="#">Sign up</a>
         </div>
-        <div>
+        <div class="hero-image">
           <div>this is a placeholder for an image</div>
         </div>
       </section>
-      <section class="light">
+      <section class="info">
         <h2>Some random information.</h2>
-        <div>
-          <div><p>this is some subtext under an illustration or image</p></div>
-          <div><p>this is some subtext under an illustration or image</p></div>
-          <div><p>this is some subtext under an illustration or image</p></div>
-          <div><p>this is some subtext under an illustration or image</p></div>
+        <div class="info-cards">
+          <div class="card-container">
+            <div class="card"></div>
+            <p>this is some subtext under an illustration or image</p>
+          </div>
+          <div class="card-container">
+            <div class="card"></div>
+            <p>this is some subtext under an illustration or image</p>
+          </div>
+          <div class="card-container">
+            <div class="card"></div>
+            <p>this is some subtext under an illustration or image</p>
+          </div>
+          <div class="card-container">
+            <div class="card"></div>
+            <p>this is some subtext under an illustration or image</p>
+          </div>
         </div>
       </section>
-      <section class="grey">
+      <section class="quote">
         <figure>
           <blockquote>
             This is an inspiring quote, or a testimonial from a customer. Maybe
@@ -56,22 +65,22 @@
           <figcaption>-Thor, God of Thunder</figcaption>
         </figure>
       </section>
-      <section class="light">
-        <div>
-          <div>
+      <section class="cta">
+        <div class="cta-container">
+          <div class="cta-text">
             <h3>Call to action! It's time!</h3>
             <p>
               Sign up for our product by clicking that button right over there!
             </p>
           </div>
-          <div>
+          <div class="cta-button">
             <a href="#">Sign up</a>
           </div>
         </div>
       </section>
-      <footer class="dark">
-        <p>Copyright &copy; Sam Hillier 2025</p>
-      </footer>
     </main>
+    <footer>
+      <p>Copyright &copy; Sam Hillier 2025</p>
+    </footer>
   </body>
 </html>

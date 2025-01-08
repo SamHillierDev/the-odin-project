@@ -1,12 +1,3 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
 :root {
   /* fonts */
   --fs-sm: 18px;
@@ -14,7 +5,7 @@
   --fs-lg: 36px;
   --fs-xl: 48px;
 
-  /* colours */
+  /* colors */
   --black: #1f2937;
   --white: #f9faf8;
   --grey: #e5e7eb;
@@ -22,69 +13,193 @@
   --blue-dark: #1f2937;
 }
 
-h1 {
-  font-size: var(--fs-xl);
-  font-weight: 900;
-  color: var(--white);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h2 {
-  font-size: var(--fs-lg);
-  font-weight: 900;
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
   color: var(--black);
-}
-
-header {
-  padding: 1rem;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
+  background-color: var(--white);
   font-size: var(--fs-sm);
 }
 
-ul {
+header {
+  background-color: var(--blue-dark);
+  padding: 20px 10%;
+}
+
+header nav {
   display: flex;
-  list-style: none;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
-a {
+header .logo a,
+header ul li a {
+  color: var(--white);
   text-decoration: none;
-  color: var(--white);
 }
 
-.logo {
+header .logo a {
   font-size: var(--fs-md);
-  font-weight: 900;
+  font-weight: bold;
+}
+
+header ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+header ul li a {
+  font-weight: 500;
+  font-size: var(--fs-sm);
+}
+
+.hero {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10%;
+  background-color: var(--blue-dark);
   color: var(--white);
 }
 
-.dark {
-  background-color: var(--black);
-  color: var(--white);
+.hero-text {
+  max-width: 50%;
 }
 
-.light {
-  background-color: var(--white);
-  color: var(--black);
-}
-
-.grey {
-  background-color: var(--grey);
-  color: var(--black);
+.hero-text h1 {
+  font-size: var(--fs-xl);
+  line-height: 1.2;
 }
 
 .text-grey {
   color: var(--grey);
+  font-size: var(--fs-sm);
+  margin-bottom: 20px;
 }
 
-.button {
-  display: inline-block;
-  padding: 0.4rem 2rem;
+.button,
+.cta-button a {
   background-color: var(--blue);
   color: var(--white);
-  border-radius: 0.5rem;
+  padding: 10px 40px;
   text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: var(--fs-sm);
+}
+
+.hero-image {
+  width: 50%;
+  background-color: var(--grey);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 5px;
+  font-size: var(--fs-sm);
+  min-height: 200px;
+}
+
+.info {
+  padding: 20px 15% 60px 15%;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: var(--fs-lg);
+  margin-bottom: 30px;
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 calc(25% - 20px);
+  max-width: 250px;
+}
+
+.card {
+  background-color: var(--white);
+  border: 3px solid var(--blue);
+  border-radius: 20px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+.card-container p {
+  margin-top: 10px;
+  font-size: var(--fs-sm);
+  color: var(--black);
+}
+
+.quote {
+  background-color: var(--grey);
+  padding: 100px 15%;
+}
+
+blockquote {
+  font-size: var(--fs-md);
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+figcaption {
+  font-size: var(--fs-sm);
+  color: var(--black);
+  font-weight: 700;
+  float: right;
+}
+
+.cta {
+  padding: 50px 10%;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 30px 10%;
+  border-radius: 10px;
+}
+
+.cta-text h3 {
+  font-size: var(--fs-md);
+}
+
+.cta-text p {
+  font-size: var(--fs-sm);
+  color: var(--grey);
+}
+
+.cta-button a {
+  box-shadow: inset 0 0 0 2px var(--white);
+}
+
+footer {
+  background-color: var(--blue-dark);
+  text-align: center;
+  padding: 20px 10%;
+  color: var(--grey);
+  font-size: var(--fs-sm);
 }
