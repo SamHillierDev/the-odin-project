@@ -10,6 +10,7 @@
   --white: #f9faf8;
   --grey: #e5e7eb;
   --blue: #3b82f6;
+  --blue-light: #65a0ff;
   --blue-dark: #1f2937;
 }
 
@@ -27,37 +28,46 @@ body {
   font-size: var(--fs-sm);
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   background-color: var(--blue-dark);
   padding: 20px 10%;
 }
 
-header nav {
+.header-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
-header .logo a,
-header ul li a {
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
   color: var(--white);
   text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  white-space: nowrap;
 }
 
-header .logo a {
+.logo {
   font-size: var(--fs-md);
   font-weight: bold;
 }
 
-header ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-header ul li a {
-  font-weight: 500;
-  font-size: var(--fs-sm);
+.nav-item:hover {
+  color: var(--blue);
 }
 
 .hero {
@@ -87,13 +97,26 @@ header ul li a {
 
 .button,
 .cta-button a {
-  background-color: var(--blue);
+  display: inline-block;
+  background: radial-gradient(circle, var(--blue-light) 30%, var(--blue) 100%);
   color: var(--white);
   padding: 10px 40px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: 500;
   font-size: var(--fs-sm);
+  transition: transform 0.2s ease, background 0.2s, background-color 0.2s ease, color 0.2s ease;
+  text-wrap: nowrap;
+}
+
+.button:hover {
+  background: radial-gradient(circle, var(--white) 30%, var(--white) 100%);
+  color: var(--blue);
+}
+
+.button:active,
+.cta-button:active {
+  transform: scale(0.95);
 }
 
 .hero-image {
@@ -104,7 +127,6 @@ header ul li a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px;
   border-radius: 5px;
   font-size: var(--fs-sm);
   min-height: 200px;
@@ -133,6 +155,7 @@ header ul li a {
   align-items: center;
   flex: 1 1 calc(25% - 20px);
   max-width: 250px;
+  cursor: pointer;
 }
 
 .card {
@@ -141,12 +164,21 @@ header ul li a {
   border-radius: 20px;
   aspect-ratio: 1 / 1;
   width: 100%;
+  transition: background-color 0.2s ease;
 }
 
 .card-container p {
   margin-top: 10px;
   font-size: var(--fs-sm);
   color: var(--black);
+}
+
+.card-container:hover p {
+  text-decoration: underline;
+}
+
+.card-container:hover .card {
+  background-color: var(--grey);
 }
 
 .quote {
@@ -194,6 +226,13 @@ figcaption {
 
 .cta-button a {
   box-shadow: inset 0 0 0 2px var(--white);
+  background-image: none;
+}
+
+.cta-button a:hover {
+  background-color: var(--white);
+  color: var(--blue);
+  box-shadow: none;
 }
 
 footer {
