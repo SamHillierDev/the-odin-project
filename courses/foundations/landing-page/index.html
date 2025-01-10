@@ -13,6 +13,9 @@
         <div class="container">
           <nav class="header-nav">
             <a href="#" class="nav-item logo">Header Logo</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+              ☰
+            </button>
             <ul class="nav-links">
               <li><a href="#" class="nav-item">header link one</a></li>
               <li><a href="#" class="nav-item">header link two</a></li>
@@ -95,5 +98,22 @@
         <p>Copyright &copy; Sam Hillier 2025</p>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+        document.addEventListener("click", function (event) {
+          if (
+            !navLinks.contains(event.target) &&
+            !menuToggle.contains(event.target)
+          ) {
+            navLinks.classList.remove("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
