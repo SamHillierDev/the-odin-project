@@ -14,9 +14,9 @@ The Odin Project provides a free open source coding curriculum that can be taken
 
 | Project    | Description         | Code           | Demo           |
 | ---------- | ------------------- | -------------- | -------------- |
-| HTML/CSS   | Odin Recipes             | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/odin-recipes) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/odin-recipes) |
-| HTML/CSS   | Landing Page        | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/landing-page) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/landing-page/) |
-| JavaScript | Rock Paper Scissors | [View Code](#) | [View Demo](#) |
+| HTML/CSS   | Odin Recipes             | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/odin-recipes/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/odin-recipes/) |
+| HTML/CSS   | Landing Page        | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/landing-page/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/landing-page/) |
+| JavaScript | Rock Paper Scissors | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/rock-paper-scissors/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/rock-paper-scissors/) |
 | JavaScript | Etch-a-Sketch       | [View Code](#) | [View Demo](#) |
 | JavaScript | Calculator          | [View Code](#) | [View Demo](#) |
 
