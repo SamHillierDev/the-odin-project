@@ -1,39 +1,36 @@
+import { CHOICES, WIN_CONDITIONS, MESSAGES } from "./constants.js";
+
 function getComputerChoice() {
-  const choices = ["rock", "paper", "scissors"];
-  return choices[Math.floor(Math.random() * choices.length)];
+  return CHOICES[Math.floor(Math.random() * CHOICES.length)];
 }
 
 function getValidPlayerChoice() {
   while (true) {
-    let choice = prompt("Please enter rock, paper, or scissors:");
+    let choice = prompt(MESSAGES.choicePrompt);
     if (choice === null) {
-      console.log("Game cancelled by the user.");
+      console.log(MESSAGES.gameCancelled);
       return null;
     }
     choice = choice.toLowerCase().trim();
-    if (["rock", "paper", "scissors"].includes(choice)) {
+    if (CHOICES.includes(choice)) {
       return choice;
     }
-    console.log("Invalid choice. Try again.");
+    console.log(MESSAGES.invalidChoice);
   }
 }
 
 function playRound(playerChoice, computerChoice, scores) {
-  console.log(`You chose ${playerChoice}, computer chose ${computerChoice}`);
+  console.log(MESSAGES.playerComputerChoices(playerChoice, computerChoice));
   if (playerChoice === computerChoice) {
-    console.log("It's a tie!");
-  } else if (
-    (playerChoice === "rock" && computerChoice === "scissors") ||
-    (playerChoice === "paper" && computerChoice === "rock") ||
-    (playerChoice === "scissors" && computerChoice === "paper")
-  ) {
+    console.log(MESSAGES.tieRound);
+  } else if (WIN_CONDITIONS[playerChoice] === computerChoice) {
     scores.player++;
-    console.log("You win this round!");
+    console.log(MESSAGES.winRound);
   } else {
     scores.computer++;
-    console.log("You lose this round!");
+    console.log(MESSAGES.loseRound);
   }
-  console.log(`Score: Player ${scores.player} - Computer ${scores.computer}`);
+  console.log(MESSAGES.score(scores.player, scores.computer));
 }
 
 function playGame() {
@@ -42,22 +39,20 @@ function playGame() {
     while (scores.player < 5 && scores.computer < 5) {
       const playerSelection = getValidPlayerChoice();
       if (playerSelection === null) {
-        console.log("Game ended early.");
+        console.log(MESSAGES.endEarly);
         return;
       }
       const computerSelection = getComputerChoice();
       playRound(playerSelection, computerSelection, scores);
     }
     console.log(
-      scores.player > scores.computer
-        ? "Congratulations! You win the game!"
-        : "Sorry, you lost the game. Better luck next time!"
+      scores.player > scores.computer ? MESSAGES.gameWin : MESSAGES.gameLose
     );
   } while (askToReplay());
 }
 
 function askToReplay() {
-  const replay = prompt("Do you want to play again? (yes or no)").toLowerCase();
+  const replay = prompt(MESSAGES.replayPrompt).toLowerCase();
   return replay === "yes";
 }
 
