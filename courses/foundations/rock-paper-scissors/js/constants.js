@@ -7,17 +7,14 @@ export const WIN_CONDITIONS = {
 };
 
 export const MESSAGES = {
-  choicePrompt: "Please enter rock, paper, or scissors:",
-  gameCancelled: "Game cancelled by the user.",
-  invalidChoice: "Invalid choice. Try again.",
-  tieRound: "It's a tie!",
-  winRound: "You win this round!",
-  loseRound: "You lose this round!",
-  score: (player, computer) => `Score: Player ${player} - Computer ${computer}`,
-  gameWin: "Congratulations! You win the game!",
-  gameLose: "Sorry, you lost the game. Better luck next time!",
-  endEarly: "Game ended early.",
-  replayPrompt: "Do you want to play again? (yes or no)",
-  playerComputerChoices: (playerChoice, computerChoice) =>
-    `You chose ${playerChoice}, computer chose ${computerChoice}`,
+  roundChoices: (playerChoice, computerChoice) =>
+    `You chose ${playerChoice}, computer chose ${computerChoice}.`,
+  roundWin: "You won this round!",
+  roundLose: "You lost this round!",
+  roundTie: "It's a tie!",
+  roundScore: (player, computer) =>
+    `Score: Player ${player} - Computer ${computer}`,
+  gameWin: "Congratulations! You won! 😀",
+  gameLose: "Game over, you lost. Better luck next time! 😔",
+  playAgain: "Play Again",
 };

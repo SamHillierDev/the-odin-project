@@ -1,59 +1,118 @@
 import { CHOICES, WIN_CONDITIONS, MESSAGES } from "./constants.js";
 
+let scores = { player: 0, computer: 0 };
+
+const messagesContainer = document.getElementById("messages");
+const buttonSection = document.getElementById("buttons");
+
+function logMessage(message) {
+  console.log(message);
+}
+
+function createButton(text, id = null, onClick = null) {
+  const button = document.createElement("button");
+  button.textContent = text;
+  if (id) button.id = id;
+  if (onClick) button.addEventListener("click", onClick);
+  return button;
+}
+
 function getComputerChoice() {
   return CHOICES[Math.floor(Math.random() * CHOICES.length)];
 }
 
-function getValidPlayerChoice() {
-  while (true) {
-    let choice = prompt(MESSAGES.choicePrompt);
-    if (choice === null) {
-      console.log(MESSAGES.gameCancelled);
-      return null;
-    }
-    choice = choice.toLowerCase().trim();
-    if (CHOICES.includes(choice)) {
-      return choice;
-    }
-    console.log(MESSAGES.invalidChoice);
-  }
+function updateMessage({
+  playerChoice,
+  computerChoice,
+  roundResult,
+  scoreMessage,
+  finalMessage,
+}) {
+  messagesContainer.replaceChildren();
+
+  const messages = [
+    MESSAGES.roundChoices(playerChoice, computerChoice),
+    finalMessage || roundResult,
+    scoreMessage,
+  ];
+
+  messages.forEach((text) => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    messagesContainer.appendChild(p);
+  });
 }
 
-function playRound(playerChoice, computerChoice, scores) {
-  console.log(MESSAGES.playerComputerChoices(playerChoice, computerChoice));
+function updateButtons(buttonConfig) {
+  buttonSection.replaceChildren();
+  buttonConfig.forEach(({ text, id, onClick }) => {
+    buttonSection.appendChild(createButton(text, id, onClick));
+  });
+}
+
+function resetGame() {
+  scores = { player: 0, computer: 0 };
+  updateButtons(
+    CHOICES.map((choice) => ({
+      text: choice.charAt(0).toUpperCase() + choice.slice(1),
+      id: choice,
+      onClick: () => playRound(choice),
+    }))
+  );
+  messagesContainer.replaceChildren();
+}
+
+function playRound(playerChoice) {
+  const computerChoice = getComputerChoice();
+  logMessage(MESSAGES.roundChoices(playerChoice, computerChoice));
+
+  let roundResult;
   if (playerChoice === computerChoice) {
-    console.log(MESSAGES.tieRound);
+    roundResult = MESSAGES.roundTie;
   } else if (WIN_CONDITIONS[playerChoice] === computerChoice) {
     scores.player++;
-    console.log(MESSAGES.winRound);
+    roundResult = MESSAGES.roundWin;
   } else {
     scores.computer++;
-    console.log(MESSAGES.loseRound);
+    roundResult = MESSAGES.roundLose;
   }
-  console.log(MESSAGES.score(scores.player, scores.computer));
+
+  logMessage(roundResult);
+
+  const scoreMessage = MESSAGES.roundScore(scores.player, scores.computer);
+  logMessage(scoreMessage);
+
+  if (scores.player === 5 || scores.computer === 5) {
+    const finalMessage =
+      scores.player > scores.computer ? MESSAGES.gameWin : MESSAGES.gameLose;
+    logMessage(finalMessage);
+
+    updateMessage({
+      playerChoice,
+      computerChoice,
+      roundResult,
+      scoreMessage,
+      finalMessage,
+    });
+
+    replaceButtonsForReplay();
+  } else {
+    updateMessage({
+      playerChoice,
+      computerChoice,
+      roundResult,
+      scoreMessage,
+    });
+  }
 }
 
-function playGame() {
-  do {
-    const scores = { player: 0, computer: 0 };
-    while (scores.player < 5 && scores.computer < 5) {
-      const playerSelection = getValidPlayerChoice();
-      if (playerSelection === null) {
-        console.log(MESSAGES.endEarly);
-        return;
-      }
-      const computerSelection = getComputerChoice();
-      playRound(playerSelection, computerSelection, scores);
-    }
-    console.log(
-      scores.player > scores.computer ? MESSAGES.gameWin : MESSAGES.gameLose
-    );
-  } while (askToReplay());
+function replaceButtonsForReplay() {
+  updateButtons([
+    {
+      text: MESSAGES.playAgain,
+      onClick: resetGame,
+    },
+  ]);
 }
 
-function askToReplay() {
-  const replay = prompt(MESSAGES.replayPrompt).toLowerCase();
-  return replay === "yes";
-}
-
-playGame();
+resetGame();
