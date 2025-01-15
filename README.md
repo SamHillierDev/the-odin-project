@@ -12,93 +12,95 @@ The Odin Project provides a free open source coding curriculum that can be taken
 
 ### Foundations
 
-| Project    | Description         | Code           | Demo           |
+| Project    | Technology         | Code           | Demo           |
 | ---------- | ------------------- | -------------- | -------------- |
-| HTML/CSS   | Odin Recipes             | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/odin-recipes/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/odin-recipes/) |
-| HTML/CSS   | Landing Page        | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/landing-page/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/landing-page/) |
-| JavaScript | Rock Paper Scissors | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/rock-paper-scissors/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/rock-paper-scissors/) |
-| JavaScript | Etch-a-Sketch       | [View Code](#) | [View Demo](#) |
-| JavaScript | Calculator          | [View Code](#) | [View Demo](#) |
+| Odin Recipes             | [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#) [![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#)   | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/odin-recipes/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/odin-recipes/) |
+| Landing Page        | [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#) [![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#)   | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/landing-page/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/landing-page/) |
+| Rock Paper Scissors | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](https://github.com/SamHillierDev/theodinproject/tree/main/courses/foundations/rock-paper-scissors/) | [View Demo](https://samhillierdev.github.io/theodinproject/courses/foundations/rock-paper-scissors/) |
+| Etch-a-Sketch       | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Calculator          | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
 
 ### Full Stack JavaScript
 
-#### HTML and CSS
+#### HTML & CSS
 
-| Project  | Description     | Code           | Demo           |
+| Project  | Technology     | Code           | Demo           |
 | -------- | --------------- | -------------- | -------------- |
-| HTML/CSS | Sign-up Form    | [View Code](#) | [View Demo](#) |
-| HTML/CSS | Admin Dashboard | [View Code](#) | [View Demo](#) |
-| HTML/CSS | Homepage        | [View Code](#) | [View Demo](#) |
+| Sign-up Form    | [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#) [![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#) | [View Code](#) | [View Demo](#) |
+| Admin Dashboard | [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#) [![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#) | [View Code](#) | [View Demo](#) |
+| Homepage        | [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#) [![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#) | [View Code](#) | [View Demo](#) |
 
 #### JavaScript
 
-| Project    | Description         | Code           | Demo           |
+| Project    | Technology         | Code           | Demo           |
 | ---------- | ------------------- | -------------- | -------------- |
-| JavaScript | Library             | [View Code](#) | [View Demo](#) |
-| JavaScript | Tic Tac Toe         | [View Code](#) | [View Demo](#) |
-| JavaScript | Restaurant Page     | [View Code](#) | [View Demo](#) |
-| JavaScript | Todo List           | [View Code](#) | [View Demo](#) |
-| JavaScript | Weather App         | [View Code](#) | [View Demo](#) |
-| JavaScript | Recursion           | [View Code](#) | [View Demo](#) |
-| JavaScript | Linked Lists        | [View Code](#) | [View Demo](#) |
-| JavaScript | HashMap             | [View Code](#) | [View Demo](#) |
-| JavaScript | Binary Search Trees | [View Code](#) | [View Demo](#) |
-| JavaScript | Knights Travails    | [View Code](#) | [View Demo](#) |
-| JavaScript | Testing Practice    | [View Code](#) | [View Demo](#) |
-| JavaScript | Battleship          | [View Code](#) | [View Demo](#) |
+| Library             | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Tic Tac Toe         | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Restaurant Page     | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Todo List           | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Weather App         | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Recursion           | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Linked Lists        | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| HashMap             | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Binary Search Trees | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Knights Travails    | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Testing Practice    | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
+| Battleship          | [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#) | [View Code](#) | [View Demo](#) |
 
 #### React
 
-| Project | Description    | Code           | Demo           |
+| Project | Technology    | Code           | Demo           |
 | ------- | -------------- | -------------- | -------------- |
-| React   | CV Application | [View Code](#) | [View Demo](#) |
-| React   | Memory Card    | [View Code](#) | [View Demo](#) |
-| React   | Shopping Cart  | [View Code](#) | [View Demo](#) |
+| CV Application | [![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](#)   | [View Code](#) | [View Demo](#) |
+| Memory Card    | [![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](#)   | [View Code](#) | [View Demo](#) |
+| Shopping Cart  | [![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](#)   | [View Code](#) | [View Demo](#) |
 
-#### NodeJS
+#### Node.js
 
-| Project | Description              | Code           | Demo           |
+| Project | Technology              | Code           | Demo           |
 | ------- | ------------------------ | -------------- | -------------- |
-| NodeJS  | Basic Informational Site | [View Code](#) | [View Demo](#) |
-| NodeJS  | Mini Message Board       | [View Code](#) | [View Demo](#) |
-| NodeJS  | Inventory Application    | [View Code](#) | [View Demo](#) |
-| NodeJS  | Members Only             | [View Code](#) | [View Demo](#) |
-| NodeJS  | File Uploader            | [View Code](#) | [View Demo](#) |
-| NodeJS  | Blog API                 | [View Code](#) | [View Demo](#) |
-| NodeJS  | Where's Waldo            | [View Code](#) | [View Demo](#) |
-| NodeJS  | Messaging App            | [View Code](#) | [View Demo](#) |
-| NodeJS  | Odin-Book                | [View Code](#) | [View Demo](#) |
+| Basic Informational Site | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+| Mini Message Board       | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+| Inventory Application    | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+| Members Only             | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+| File Uploader            | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+| Blog API                 | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+| Where's Waldo            | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+| Messaging App            | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+| Odin-Book                | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)  | [View Code](#) | [View Demo](#) |
+
+### Full Stack Ruby on Rails
 
 #### Ruby
 
-| Project | Description        | Code           | Demo           |
+| Project | Technology        | Code           | Demo           |
 | ------- | ------------------ | -------------- | -------------- |
-| Ruby    | Caesar Cipher      | [View Code](#) | [View Demo](#) |
-| Ruby    | Sub Strings        | [View Code](#) | [View Demo](#) |
-| Ruby    | Stock Picker       | [View Code](#) | [View Demo](#) |
-| Ruby    | Bubble Sort        | [View Code](#) | [View Demo](#) |
-| Ruby    | Tic Tac Toe        | [View Code](#) | [View Demo](#) |
-| Ruby    | Mastermind         | [View Code](#) | [View Demo](#) |
-| Ruby    | Event Manager      | [View Code](#) | [View Demo](#) |
-| Ruby    | Hangman            | [View Code](#) | [View Demo](#) |
-| Ruby    | Custom Enumerables | [View Code](#) | [View Demo](#) |
-| Ruby    | Connect Four       | [View Code](#) | [View Demo](#) |
-| Ruby    | Ruby Final Project | [View Code](#) | [View Demo](#) |
+| Caesar Cipher      | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Sub Strings        | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Stock Picker       | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Bubble Sort        | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Tic Tac Toe        | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Mastermind         | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Event Manager      | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Hangman            | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Custom Enumerables | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Connect Four       | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
+| Ruby Final Project | ![Ruby](https://img.shields.io/badge/Ruby-%23CC342D.svg?&logo=ruby&logoColor=white)    | [View Code](#) | [View Demo](#) |
 
 #### Ruby on Rails
 
-| Project | Description                 | Code           | Demo           |
+| Project | Technology                 | Code           | Demo           |
 | ------- | --------------------------- | -------------- | -------------- |
-| Rails   | Blog App                    | [View Code](#) | [View Demo](#) |
-| Rails   | Micro-Reddit                | [View Code](#) | [View Demo](#) |
-| Rails   | Forms                       | [View Code](#) | [View Demo](#) |
-| Rails   | Members Only                | [View Code](#) | [View Demo](#) |
-| Rails   | Private Events              | [View Code](#) | [View Demo](#) |
-| Rails   | Flight Booker               | [View Code](#) | [View Demo](#) |
-| Rails   | Kittens API                 | [View Code](#) | [View Demo](#) |
-| Rails   | Flickr API                  | [View Code](#) | [View Demo](#) |
-| Rails   | Sending Confirmation Emails | [View Code](#) | [View Demo](#) |
-| Rails   | Rails Final Project         | [View Code](#) | [View Demo](#) |
+| Blog App                    | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Micro-Reddit                | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Forms                       | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Members Only                | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Private Events              | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Flight Booker               | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Kittens API                 | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Flickr API                  | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Sending Confirmation Emails | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
+| Rails Final Project         | ![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?&logo=ruby-on-rails&logoColor=white)   | [View Code](#) | [View Demo](#) |
 
 ## Security Vulnerabilities
 
