@@ -1,47 +1,20 @@
+import {
+  createButton,
+  getComputerChoice,
+  addMessagesToContainer,
+  addResetProgressButton,
+  saveGameStats,
+  loadGameStats,
+  getGameStatsMessage,
+} from "./utils.js";
+
 import { CHOICES, WIN_CONDITIONS, MESSAGES } from "./constants.js";
 
 let scores = { player: 0, computer: 0 };
+let gameStats = loadGameStats();
 
 const messagesContainer = document.getElementById("messages");
 const buttonSection = document.getElementById("buttons");
-
-function logMessage(message) {
-  console.log(message);
-}
-
-function createButton(text, id = null, onClick = null) {
-  const button = document.createElement("button");
-  button.textContent = text;
-  if (id) button.id = id;
-  if (onClick) button.addEventListener("click", onClick);
-  return button;
-}
-
-function getComputerChoice() {
-  return CHOICES[Math.floor(Math.random() * CHOICES.length)];
-}
-
-function updateMessage({
-  playerChoice,
-  computerChoice,
-  roundResult,
-  scoreMessage,
-  finalMessage,
-}) {
-  messagesContainer.replaceChildren();
-
-  const messages = [
-    MESSAGES.roundChoices(playerChoice, computerChoice),
-    finalMessage || roundResult,
-    scoreMessage,
-  ];
-
-  messages.forEach((text) => {
-    const p = document.createElement("p");
-    p.textContent = text;
-    messagesContainer.appendChild(p);
-  });
-}
 
 function updateButtons(buttonConfig) {
   buttonSection.replaceChildren();
@@ -59,12 +32,39 @@ function resetGame() {
       onClick: () => playRound(choice),
     }))
   );
+
   messagesContainer.replaceChildren();
+
+  addMessagesToContainer(messagesContainer, [
+    getGameStatsMessage(MESSAGES, gameStats),
+  ]);
+
+  addResetProgressButton(messagesContainer, resetProgress);
+}
+
+function updateMessage({
+  playerChoice,
+  computerChoice,
+  roundResult,
+  scoreMessage,
+  finalMessage,
+}) {
+  messagesContainer.replaceChildren();
+
+  const messages = [
+    MESSAGES.roundChoices(playerChoice, computerChoice),
+    finalMessage || roundResult,
+    scoreMessage,
+    getGameStatsMessage(MESSAGES, gameStats),
+  ];
+
+  addMessagesToContainer(messagesContainer, messages);
+
+  addResetProgressButton(messagesContainer, resetProgress);
 }
 
 function playRound(playerChoice) {
-  const computerChoice = getComputerChoice();
-  logMessage(MESSAGES.roundChoices(playerChoice, computerChoice));
+  const computerChoice = getComputerChoice(CHOICES);
 
   let roundResult;
   if (playerChoice === computerChoice) {
@@ -77,22 +77,27 @@ function playRound(playerChoice) {
     roundResult = MESSAGES.roundLose;
   }
 
-  logMessage(roundResult);
+  const isGameOver = scores.player === 5 || scores.computer === 5;
 
   const scoreMessage = MESSAGES.roundScore(scores.player, scores.computer);
-  logMessage(scoreMessage);
 
-  if (scores.player === 5 || scores.computer === 5) {
+  if (isGameOver) {
+    if (scores.player > scores.computer) {
+      gameStats.player++;
+    } else {
+      gameStats.computer++;
+    }
+
+    saveGameStats(gameStats);
+
     const finalMessage =
       scores.player > scores.computer ? MESSAGES.gameWin : MESSAGES.gameLose;
-    logMessage(finalMessage);
 
     updateMessage({
       playerChoice,
       computerChoice,
-      roundResult,
-      scoreMessage,
       finalMessage,
+      scoreMessage,
     });
 
     replaceButtonsForReplay();
@@ -113,6 +118,12 @@ function replaceButtonsForReplay() {
       onClick: resetGame,
     },
   ]);
+}
+
+function resetProgress() {
+  localStorage.removeItem("stats");
+  gameStats = { player: 0, computer: 0 };
+  resetGame();
 }
 
 resetGame();
