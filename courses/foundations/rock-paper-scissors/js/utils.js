@@ -22,11 +22,10 @@ export function addMessagesToContainer(container, messages) {
 
 export function addResetProgressButton(container, resetCallback) {
   if (localStorage.getItem("stats")) {
-    const resetButton = createButton(
-      MESSAGES.resetProgress,
-      null,
-      resetCallback
-    );
+    const resetButton = document.createElement("button");
+    resetButton.textContent = MESSAGES.resetProgress;
+    resetButton.className = "text-button reset-progress-button";
+    resetButton.addEventListener("click", resetCallback);
     container.appendChild(resetButton);
   }
 }

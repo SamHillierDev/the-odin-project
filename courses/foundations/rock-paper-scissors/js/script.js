@@ -18,8 +18,23 @@ const buttonSection = document.getElementById("buttons");
 
 function updateButtons(buttonConfig) {
   buttonSection.replaceChildren();
-  buttonConfig.forEach(({ text, id, onClick }) => {
-    buttonSection.appendChild(createButton(text, id, onClick));
+  buttonConfig.forEach(({ id, onClick, imgSrc, text }) => {
+    const button = document.createElement("button");
+    button.className = "choice-button";
+    button.id = id;
+    button.onclick = onClick;
+
+    if (imgSrc) {
+      const img = document.createElement("img");
+      img.src = imgSrc;
+      img.alt = `${id.charAt(0).toUpperCase() + id.slice(1)}`;
+      button.appendChild(img);
+    } else if (text) {
+      button.textContent = text;
+      button.classList.add("text-button");
+    }
+
+    buttonSection.appendChild(button);
   });
 }
 
@@ -30,6 +45,7 @@ function resetGame() {
       text: choice.charAt(0).toUpperCase() + choice.slice(1),
       id: choice,
       onClick: () => playRound(choice),
+      imgSrc: `assets/images/${choice}.png`,
     }))
   );
 
