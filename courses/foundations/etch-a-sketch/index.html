@@ -8,7 +8,16 @@
   </head>
   <body>
     <h1>Etch-a-Sketch</h1>
-    <section class="grid"></section>
+    <section>
+      <label for="grid-size">Enter grid size:</label>
+      <input type="number" id="grid-size" min="2" max="100" value="16" />
+      <button id="generate-grid">Generate Grid</button>
+      <div id="error"></div>
+    </section>
+    <section class="grid-container">
+      <section class="grid"></section>
+      <button id="reset-grid">Reset Grid</button>
+    </section>
     <script src="js/script.js" type="module"></script>
   </body>
 </html>

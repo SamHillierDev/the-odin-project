@@ -4,4 +4,58 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  gap: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+label {
+  font-size: 1rem;
+  color: #555;
+}
+
+input[type="number"] {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 60px;
+  text-align: center;
+}
+
+button {
+  padding: 5px 15px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#error {
+  margin-top: 10px;
+  color: red;
 }
