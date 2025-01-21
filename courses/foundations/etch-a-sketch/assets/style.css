@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  gap: 20px;
+  gap: 10px;
 }
 
 h1 {
@@ -56,6 +56,5 @@ button:disabled {
 }
 
 #error {
-  margin-top: 10px;
   color: red;
 }

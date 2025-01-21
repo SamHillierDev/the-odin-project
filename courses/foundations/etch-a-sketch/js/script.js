@@ -2,6 +2,22 @@ const gridContainer = document.querySelector(".grid");
 const generateButton = document.getElementById("generate-grid");
 const resetButton = document.getElementById("reset-grid");
 const gridSizeInput = document.getElementById("grid-size");
+const randomColorCheckbox = document.getElementById("random-color-checkbox");
+const darkenCheckbox = document.getElementById("darken-checkbox");
+
+let globalHue = 0;
+
+randomColorCheckbox.addEventListener("change", () => {
+  if (randomColorCheckbox.checked) {
+    darkenCheckbox.checked = false;
+  }
+});
+
+darkenCheckbox.addEventListener("change", () => {
+  if (darkenCheckbox.checked) {
+    randomColorCheckbox.checked = false;
+  }
+});
 
 gridContainer.style.display = "grid";
 gridContainer.style.width = "400px";
@@ -12,20 +28,34 @@ gridContainer.style.overflow = "hidden";
 function createGrid(size) {
   gridContainer.innerHTML = "";
 
-  gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-  gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  const squareSize = 400 / size;
+  gridContainer.style.gridTemplateColumns = `repeat(${size}, ${squareSize}px)`;
+  gridContainer.style.gridTemplateRows = `repeat(${size}, ${squareSize}px)`;
 
   for (let i = 0; i < size * size; i++) {
     const square = document.createElement("div");
-
     square.style.border = "1px solid lightgray";
     square.style.backgroundColor = "white";
     square.style.boxSizing = "border-box";
-    square.style.width = "100%";
-    square.style.height = "100%";
+    square.style.width = `${squareSize}px`;
+    square.style.height = `${squareSize}px`;
+    square.dataset.darkenLevel = "0";
 
     square.addEventListener("mouseover", () => {
-      square.style.backgroundColor = "black";
+      if (randomColorCheckbox.checked) {
+        globalHue = (globalHue + 30) % 360;
+        square.style.backgroundColor = `hsl(${globalHue}, 100%, 50%)`;
+      } else if (darkenCheckbox.checked) {
+        let currentLevel = parseInt(square.dataset.darkenLevel);
+        if (currentLevel < 10) {
+          currentLevel++;
+          square.dataset.darkenLevel = currentLevel.toString();
+          const darkenPercentage = (10 - currentLevel) * 10;
+          square.style.backgroundColor = `hsl(0, 0%, ${darkenPercentage}%)`;
+        }
+      } else {
+        square.style.backgroundColor = "black";
+      }
       checkResetButtonState();
     });
 
@@ -39,29 +69,41 @@ resetButton.addEventListener("click", () => {
   const squares = gridContainer.querySelectorAll("div");
   squares.forEach((square) => {
     square.style.backgroundColor = "white";
+    square.dataset.darkenLevel = "0";
   });
+  globalHue = 0;
   checkResetButtonState();
 });
 
 function checkResetButtonState() {
   const squares = gridContainer.querySelectorAll("div");
-  const hasBlackSquares = Array.from(squares).some(
-    (square) => square.style.backgroundColor === "black"
+  const hasColoredSquares = Array.from(squares).some(
+    (square) => square.style.backgroundColor !== "white"
   );
-  resetButton.disabled = !hasBlackSquares;
+  resetButton.disabled = !hasColoredSquares;
 }
 
 createGrid(16);
 
-const errorMessageDiv = document.getElementById("error");
-
 generateButton.addEventListener("click", () => {
+  generateGridFromInput();
+});
+
+gridSizeInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    generateGridFromInput();
+  }
+});
+
+function generateGridFromInput() {
   const gridSize = parseInt(gridSizeInput.value);
 
   if (gridSize >= 2 && gridSize <= 100) {
-    errorMessageDiv.textContent = "";
+    globalHue = 0;
     createGrid(gridSize);
+    document.getElementById("error").textContent = "";
   } else {
-    errorMessageDiv.textContent = "Please enter a grid size between 2 and 100.";
+    document.getElementById("error").textContent =
+      "Please enter a grid size between 2 and 100.";
   }
-});
+}
