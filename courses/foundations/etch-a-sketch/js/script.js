@@ -25,6 +25,26 @@ gridContainer.style.height = "400px";
 gridContainer.style.borderRadius = "5px";
 gridContainer.style.overflow = "hidden";
 
+const colorPicker = document.getElementById("color-picker");
+
+function applyColor(square) {
+  if (randomColorCheckbox.checked) {
+    globalHue = (globalHue + 30) % 360;
+    square.style.backgroundColor = `hsl(${globalHue}, 100%, 50%)`;
+  } else if (darkenCheckbox.checked) {
+    let currentLevel = parseInt(square.dataset.darkenLevel);
+    if (currentLevel < 10) {
+      currentLevel++;
+      square.dataset.darkenLevel = currentLevel.toString();
+      const darkenPercentage = (10 - currentLevel) * 10;
+      square.style.backgroundColor = `hsl(0, 0%, ${darkenPercentage}%)`;
+    }
+  } else {
+    square.style.backgroundColor = colorPicker.value;
+  }
+  checkResetButtonState();
+}
+
 function createGrid(size) {
   gridContainer.innerHTML = "";
 
@@ -41,23 +61,7 @@ function createGrid(size) {
     square.style.height = `${squareSize}px`;
     square.dataset.darkenLevel = "0";
 
-    square.addEventListener("mouseover", () => {
-      if (randomColorCheckbox.checked) {
-        globalHue = (globalHue + 30) % 360;
-        square.style.backgroundColor = `hsl(${globalHue}, 100%, 50%)`;
-      } else if (darkenCheckbox.checked) {
-        let currentLevel = parseInt(square.dataset.darkenLevel);
-        if (currentLevel < 10) {
-          currentLevel++;
-          square.dataset.darkenLevel = currentLevel.toString();
-          const darkenPercentage = (10 - currentLevel) * 10;
-          square.style.backgroundColor = `hsl(0, 0%, ${darkenPercentage}%)`;
-        }
-      } else {
-        square.style.backgroundColor = "black";
-      }
-      checkResetButtonState();
-    });
+    square.addEventListener("mouseover", () => applyColor(square));
 
     gridContainer.appendChild(square);
   }
