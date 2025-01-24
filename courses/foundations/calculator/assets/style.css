@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+.calculator {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #4a5568;
+}
+
+output {
+  display: block;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+div > div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #e2e8f0;
+  color: #333;
+  transition: all 0.2s;
+  min-width: 60px;
+}
+
+button:hover {
+  background-color: #cbd5e0;
+}
+
+button:active {
+  background-color: #a0aec0;
+}
+
+button[aria-label="Delete"],
+button[aria-label="All Clear"] {
+  background-color: #f56565;
+  color: #fff;
+  flex: 1;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+button[aria-label="Delete"]:hover,
+button[aria-label="All Clear"]:hover {
+  background-color: #e53e3e;
+}
+
+button[aria-label="Multiply"],
+button[aria-label="Divide"],
+button[aria-label="Add"],
+button[aria-label="Subtract"] {
+  background-color: #63b3ed;
+  color: #fff;
+}
+
+button[aria-label="Multiply"]:hover,
+button[aria-label="Divide"]:hover,
+button[aria-label="Add"]:hover,
+button[aria-label="Subtract"]:hover {
+  background-color: #4299e1;
+}
