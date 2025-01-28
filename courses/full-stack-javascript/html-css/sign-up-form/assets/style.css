@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Norse Bold";
+  src: url("../assets/fonts/Norse-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #4e5f3e;
+  background: url("../assets/images/odin-background.avif") no-repeat center
+    center/cover;
+  width: 40%;
+  position: relative;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  gap: 2px;
+  margin-top: 300px;
+  padding: 10px;
+}
+
+.header-logo img {
+  width: 120px;
+  height: auto;
+}
+
+h1 {
+  font-family: "Norse Bold", sans-serif;
+  font-size: 7rem;
+  color: white;
+  text-align: center;
+}
+
+.photo-credit {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #f9f9f9;
+}
+
+.photo-credit a {
+  text-decoration: underline;
+}
+
+.photo-credit a:visited {
+  color: #f9f9f9;
+}
+
+main {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+form {
+  background: #e5e7eb;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0px 0px 5px rgba(59, 130, 246, 0.5);
+  outline: none;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #596d48;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4e5f3e;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: #596d48;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
