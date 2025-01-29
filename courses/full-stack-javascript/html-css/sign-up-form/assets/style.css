@@ -31,7 +31,7 @@ header {
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   gap: 2px;
-  margin-top: 300px;
+  margin-top: 30%;
   padding: 10px;
 }
 
@@ -58,9 +58,6 @@ h1 {
 
 .photo-credit a {
   text-decoration: underline;
-}
-
-.photo-credit a:visited {
   color: #f9f9f9;
 }
 
@@ -68,35 +65,39 @@ main {
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 40px;
   background: #f9f9f9;
 }
 
-form {
-  background: #e5e7eb;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20%;
+  font-size: 1.2rem;
+  padding: 40px;
 }
 
 fieldset {
   border: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-legend {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0;
 }
 
 form div {
   display: flex;
   flex-direction: column;
-  width: 48%;
+  width: 100%;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 label {
@@ -121,15 +122,20 @@ input:invalid {
   border-color: red;
 }
 
+.button-container {
+  padding: 20px 40px;
+  max-width: fit-content;
+}
+
 button {
-  margin-top: 20px;
-  padding: 10px;
-  width: 100%;
+  padding: 12px 50px;
   background-color: #596d48;
+  text-wrap: nowrap;
   color: white;
   font-size: 1.1rem;
+  font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -138,8 +144,7 @@ button:hover {
 }
 
 footer {
-  margin-top: 10px;
-  text-align: center;
+  padding: 20px 40px;
 }
 
 footer a {
