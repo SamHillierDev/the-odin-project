@@ -156,3 +156,39 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+  }
+
+  header {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .text-container {
+    font-size: 1rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  fieldset {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .button-container {
+    text-align: center;
+  }
+}
