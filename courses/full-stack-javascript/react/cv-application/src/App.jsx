@@ -1,26 +1,47 @@
 import { useState } from "react";
 import TextInput from "./components/TextInput";
-import { personalDetails } from "./data/formFields";
+import { educationDetails, personalDetails } from "./data/formFields";
 
 const App = () => {
-  const [formData, setFormData] = useState(
-    personalDetails.reduce((acc, field) => ({ ...acc, [field.name]: "" }), {})
-  );
+  const initialiseForm = (fields) =>
+    fields.reduce((acc, { name }) => ({ ...acc, [name]: "" }), {});
 
-  const handleChange = ({ target: { name, value } }) =>
-    setFormData((prev) => ({ ...prev, [name]: value }));
+  const [formData, setFormData] = useState({
+    personal: initialiseForm(personalDetails),
+    education: initialiseForm(educationDetails),
+  });
+
+  const handleChange = (section) => (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [section]: { ...prev[section], [name]: value },
+    }));
+  };
+
+  const renderFormSection = (title, section, fields) => {
+    const sectionValues = formData[section];
+
+    return (
+      <section>
+        <h2>{title}</h2>
+        {fields.map(({ name, ...inputProps }) => (
+          <TextInput
+            key={name}
+            name={name}
+            value={sectionValues[name]}
+            onChange={handleChange(section)}
+            {...inputProps}
+          />
+        ))}
+      </section>
+    );
+  };
 
   return (
     <>
-      {personalDetails.map(({ name, ...rest }) => (
-        <TextInput
-          key={name}
-          name={name}
-          value={formData[name]}
-          onChange={handleChange}
-          {...rest}
-        />
-      ))}
+      {renderFormSection("Personal Details", "personal", personalDetails)}
+      {renderFormSection("Education", "education", educationDetails)}
     </>
   );
 };

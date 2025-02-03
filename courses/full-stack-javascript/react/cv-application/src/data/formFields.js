@@ -4,3 +4,9 @@ export const personalDetails = [
   { name: "email", label: "Email address", placeholder: "Enter email address", type: "email" },
   { name: "phone", label: "Phone number", placeholder: "Enter phone number", type: "tel" },
 ];
+
+export const educationDetails = [
+  { name: "school", label: "School/University", placeholder: "Enter your school name" },
+  { name: "degree", label: "Degree", placeholder: "Enter your degree" },
+  { name: "year", label: "Year of Graduation", type: "number", placeholder: "Enter graduation year" },
+];
