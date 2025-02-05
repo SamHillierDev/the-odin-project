@@ -47,7 +47,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background-color: #1565c0;
+  background-color: #1992d4;
   border-radius: 5px;
 }
 
@@ -83,7 +83,7 @@ header button {
 }
 
 header button:hover {
-  background-color: #1565c0;
+  background-color: #1992d4;
 }
 
 header img {
@@ -197,7 +197,7 @@ header div:last-child button {
 }
 
 header div:last-child button:hover {
-  background-color: #1565c0;
+  background-color: #1992d4;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,94 @@
+.icon-btn {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  padding: 0;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.search-icon {
+  -webkit-mask: url("./icons/magnify.svg") no-repeat center;
+  mask: url("./icons/magnify.svg") no-repeat center;
+  background-color: black;
+}
+
+.notifications-icon {
+  -webkit-mask: url("./icons/bell-ring-outline.svg") no-repeat center;
+  mask: url("./icons/bell-ring-outline.svg") no-repeat center;
+  background-color: black;
+}
+
+.dashboard-icon {
+  -webkit-mask: url("./icons/view-dashboard.svg") no-repeat center;
+  mask: url("./icons/view-dashboard.svg") no-repeat center;
+}
+
+.home-icon {
+  -webkit-mask: url("./icons/home.svg") no-repeat center;
+  mask: url("./icons/home.svg") no-repeat center;
+}
+
+.profile-icon {
+  -webkit-mask: url("./icons/account.svg") no-repeat center;
+  mask: url("./icons/account.svg") no-repeat center;
+}
+
+.messages-icon {
+  -webkit-mask: url("./icons/message.svg") no-repeat center;
+  mask: url("./icons/message.svg") no-repeat center;
+}
+
+.history-icon {
+  -webkit-mask: url("./icons/clock.svg") no-repeat center;
+  mask: url("./icons/clock.svg") no-repeat center;
+}
+
+.tasks-icon {
+  -webkit-mask: url("./icons/note-multiple.svg") no-repeat center;
+  mask: url("./icons/note-multiple.svg") no-repeat center;
+}
+
+.communities-icon {
+  -webkit-mask: url("./icons/account-group.svg") no-repeat center;
+  mask: url("./icons/account-group.svg") no-repeat center;
+}
+
+.settings-icon {
+  -webkit-mask: url("./icons/cog.svg") no-repeat center;
+  mask: url("./icons/cog.svg") no-repeat center;
+}
+
+.support-icon {
+  -webkit-mask: url("./icons/help-circle.svg") no-repeat center;
+  mask: url("./icons/help-circle.svg") no-repeat center;
+}
+
+.privacy-icon {
+  -webkit-mask: url("./icons/shield-check.svg") no-repeat center;
+  mask: url("./icons/shield-check.svg") no-repeat center;
+}
+
+.star-icon {
+  -webkit-mask: url("./icons/star-plus-outline.svg") no-repeat center;
+  mask: url("./icons/star-plus-outline.svg") no-repeat center;
+  background-color: black;
+}
+
+.watch-icon {
+  -webkit-mask: url("./icons/eye-plus-outline.svg") no-repeat center;
+  mask: url("./icons/eye-plus-outline.svg") no-repeat center;
+  background-color: black;
+}
+
+.fork-icon {
+  -webkit-mask: url("./icons/source-fork.svg") no-repeat center;
+  mask: url("./icons/source-fork.svg") no-repeat center;
+  background-color: black;
+}
