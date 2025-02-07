@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+
+  <body>
+    <h1>Mini Messageboard</h1>
+    <ul>
+      <% messages.forEach((msg, index)=> { %>
+      <li>
+        <strong> <%= msg.user %> </strong>: <%= msg.text %>
+        <em>(<%= msg.added.toLocaleString() %>)</em>
+        <a href="/message/<%= index %>">[Open]</a>
+      </li>
+      <% }) %>
+    </ul>
+    <a href="/new">Add a New Message</a>
+  </body>
+</html>
