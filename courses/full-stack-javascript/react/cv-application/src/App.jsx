@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TextInput from "./components/TextInput";
-import { educationDetails, personalDetails } from "./data/formFields";
+import { educationDetails, experienceDetails, personalDetails } from "./data/formFields";
 
 const App = () => {
   const initialiseForm = (fields) =>
@@ -9,6 +9,7 @@ const App = () => {
   const [formData, setFormData] = useState({
     personal: initialiseForm(personalDetails),
     education: initialiseForm(educationDetails),
+    experience: initialiseForm(experienceDetails),
   });
 
   const handleChange = (section) => (e) => {
@@ -42,6 +43,7 @@ const App = () => {
     <>
       {renderFormSection("Personal Details", "personal", personalDetails)}
       {renderFormSection("Education", "education", educationDetails)}
+      {renderFormSection("Experience", "experience", experienceDetails)}
     </>
   );
 };
