@@ -3,16 +3,22 @@ const TextInput = ({
   id,
   name,
   type = "text",
-  placeholder,
+  placeholder = "",
   value,
   onChange,
+  required = false,
+  className,
   ...props
 }) => {
   const inputId = id || name;
 
   return (
-    <div>
-      {label && <label htmlFor={inputId}>{label}</label>}
+    <div className="cv-input-group">
+      {label && (
+        <label htmlFor={inputId} className="cv-label">
+          {label}
+        </label>
+      )}
       <input
         id={inputId}
         name={name}
@@ -20,6 +26,8 @@ const TextInput = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        required={required}
+        className={`cv-input ${className}`}
         {...props}
       />
     </div>
